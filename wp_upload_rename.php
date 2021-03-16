@@ -127,7 +127,7 @@ if ( ! class_exists( 'wp_upload_rename' ) ) {
 						if ( in_array( $args[0], array( 'char', 'num' ), true ) ) {
 							$rp = $this->_name( $args[0], empty( $args[1] ) ? 5 : (int) $args[1] );
 						} elseif ( 'date' === $args[0] ) {
-							$rp = $this->_name( $args[0], 0, empty( $args[1] ) ? '' : (int) $args[1] );
+							$rp = $this->_name( $args[0], 0, empty( $args[1] ) ? '' : $args[1] );
 						} elseif ( in_array( $args[0], array( 'title', 'name' ), true ) ) {
 							$rp = $this->_name( $args[0], 0, '', $postid );
 						} else {
